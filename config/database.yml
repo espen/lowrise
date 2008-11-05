@@ -19,8 +19,9 @@ development:
   encoding: utf8
   database: Lowrise_development
   username: root
-  password:
-  socket: /var/run/mysqld/mysqld.sock
+  password: megmeg
+  socket: /tmp/mysql.sock
+#  socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
