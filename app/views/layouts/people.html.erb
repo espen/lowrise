@@ -11,7 +11,15 @@
 
 <p style="color: green"><%= flash[:notice] %></p>
 
-<%= yield  %>
+<div id="wrap">
+<div id="view_content">
+<%= yield  %></div>
 
+
+<div id="sidebar">
+	<%= link_to image_tag('icons/PNG-24/Profile.png',:size=>'24x24') + ' New person', new_person_path %>
+</div>
+
+</div>
 </body>
 </html>

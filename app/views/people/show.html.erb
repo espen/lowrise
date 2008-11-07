@@ -1,13 +1,14 @@
 <p>
   <b>Firstname:</b>
-  <%=h @person.FirstName %>
+  <%=h @person.first_name %>
 </p>
 
 <p>
   <b>Lastname:</b>
-  <%=h @person.LastName %>
+  <%=h @person.last_name %>
 </p>
 
 
 <%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Delete', @person, :confirm => 'Are you sure?', :method => :delete %> | 
 <%= link_to 'Back', people_path %>
