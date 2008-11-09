@@ -2,7 +2,7 @@ class CompaniesController < ApplicationController
   # GET /companies
   # GET /companies.xml
   def index
-    @companies = Company.find(:all, :order => "created_at DESC",:limit => 2)
+    @companies = Company.find(:all)
 
     respond_to do |format|
       format.html # index.html.erb

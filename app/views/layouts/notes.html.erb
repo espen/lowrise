@@ -4,26 +4,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>People: <%= controller.action_name %></title>
+  <title>Notes: <%= controller.action_name %></title>
   <%= stylesheet_link_tag 'scaffold' %>
-<%= javascript_include_tag :defaults %>
 </head>
 <body>
 
 <p style="color: green"><%= flash[:notice] %></p>
 
-<div id="wrap">
-<div id="view_content">
-<%= yield  %></div>
-
-
-<div id="sidebar">
-	<%= link_to image_tag('icons/PNG-24/Profile.png',:size=>'24x24') + ' New person', new_person_path %>
-</div>
-
-</div>
-
-<div id="footer">Lowrise built with <%= image_tag('rails.png' ) %></div>
+<%= yield  %>
 
 </body>
 </html>
