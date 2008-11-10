@@ -4,6 +4,7 @@
 <% for person in @people %>
   <tr>
     <td><h1><%= link_to image_tag('icons/PNG-24/Profile.png',:size=>'24x24') + ' ' + person.name, person %>
+	<%= person.title %>
 	<%= ((' at ' + person.company_name) unless person.company_name.blank? ) %>
 </h1></td>
   </tr>
