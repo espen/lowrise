@@ -8,6 +8,11 @@
   <%=h @person.last_name %>
 </p>
 
+<p>
+  <b>Company:</b>
+  <%=h @person.company_name %>
+</p>
+
 
 <%= link_to 'Edit', edit_person_path(@person) %> |
 <%= link_to 'Delete', @person, :confirm => 'Are you sure?', :method => :delete %> | 

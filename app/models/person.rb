@@ -1,8 +1,18 @@
 class Person < ActiveRecord::Base
-    has_many :notes
+  belongs_to :company
+  has_many :notes
+      
 	def name
 		name = first_name
 		name += " " unless first_name.nil? and last_name.nil?
 		name += last_name unless last_name.nil?
 	end
+	
+	def company_name
+	  company.name if company
+	end
+	
+	def company_name=(name)
+    self.company = Company.find_or_create_by_name(name) unless name.blank?
+  end
 end

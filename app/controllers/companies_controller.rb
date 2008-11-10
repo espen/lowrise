@@ -2,11 +2,12 @@ class CompaniesController < ApplicationController
   # GET /companies
   # GET /companies.xml
   def index
-    @companies = Company.find(:all)
-
+    #@companies = Company.find(:all )
+    @companies = Company.find(:all, :conditions => ['name LIKE ?', "%#{params[:search]}%"])
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @companies }
+      format.js # index.js.erb
     end
   end
 
@@ -82,4 +83,5 @@ class CompaniesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
 end
