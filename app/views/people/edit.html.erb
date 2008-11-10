@@ -11,7 +11,10 @@
     <%= f.label :last_name %><br />
     <%= f.text_field :last_name %>
   </p>
- 
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p> 
   <p>
     <%= f.label :company_name %><br />
 <%= text_field_with_auto_complete :person, :company_name, {},{:url => formatted_companies_path(:js), :method => :get, :param_name => 'search' } %> 

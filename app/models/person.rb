@@ -1,6 +1,7 @@
 class Person < ActiveRecord::Base
   belongs_to :company
   has_many :notes
+  has_many :phone_numbers
       
 	def name
 		name = first_name
